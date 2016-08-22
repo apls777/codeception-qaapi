@@ -6,6 +6,9 @@
         "codeception/codeception": ">=2.2"
     },
     "license": "MIT",
+    "autoload": {
+        "psr-0": { "CodeceptionQaApi\\": "src/" }
+    },
     "authors": [
         {
             "name": "Oleg Polosin",
