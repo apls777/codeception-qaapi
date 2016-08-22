@@ -1,6 +1,6 @@
 <?php
 
-namespace CodeceptionQaApi\Command;
+namespace Codeception\Module\QaApi\Command;
 
 use \Codeception\Configuration;
 use \Symfony\Component\Console\Command\Command;

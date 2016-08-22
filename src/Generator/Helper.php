@@ -1,6 +1,6 @@
 <?php
 
-namespace CodeceptionQaApi\Generator;
+namespace Codeception\Module\QaApi\Generator;
 
 use \Codeception\Util\Shared\Namespaces;
 use \Codeception\Util\Template;

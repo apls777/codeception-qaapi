@@ -7,7 +7,7 @@
     },
     "license": "MIT",
     "autoload": {
-        "psr-0": { "CodeceptionQaApi\\": "src/" }
+        "psr-4": { "Codeception\\Module\\QaApi": "src" }
     },
     "authors": [
         {
