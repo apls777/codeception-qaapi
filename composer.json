@@ -1,6 +1,7 @@
 {
     "name": "qadept/codeception-qaapi",
     "description": "Codeceprion module to work with QA API",
+    "version": "1.0.0",
     "type": "library",
     "require": {
         "codeception/codeception": ">=2.2"
@@ -14,5 +15,6 @@
             "name": "Oleg Polosin",
             "email": "apls777@gmail.com"
         }
-    ]
+    ],
+    "minimum-stability": "stable"
 }
