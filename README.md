@@ -36,6 +36,39 @@ Developer just needs to write one API method which can change a creation time of
 
 ## How to install
 
-```bash
-composer require qadept/codeception-qaapi
-```
+1. Install QaApi package:
+
+    ```bash
+    composer require qadept/codeception-qaapi
+    ```
+
+2. Add QaApi module to a suite file. Its content should look like:
+
+    ```yaml
+    class_name: FunctionalTester
+    modules:
+        enabled:
+            - \WebShop\Helper\Functional
+            - WebDriver:
+                url: 'http://myproject.local'
+                browser: phantomjs
+                window_size: 1280x960
+            - Asserts
+            - \WebShop\Helper\QaApi:
+                url: 'http://myproject.local/qaapi'
+                api_key: my_secret_key
+    ```
+
+    Here "**url**" is a base URL for API, "**api_key**" is a key for authorization. 
+
+3. Create a **qaapi.json** file in the directory with tests (the same directory where you have _codeception.yml_ file). This file is using [Swagger Specification](http://swagger.io/specification/) and will be used for automatical generation of PHP API Client.
+
+4. Generate PHP API Client and helper classes:
+
+    ```bash
+    ./vendor/bin/codecept qaapi:generate -c projects/WebShop
+    ```
+    
+    ```bash
+    ./vendor/bin/codecept build -c projects/WebShop
+    ```
